@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="https://github.com/SimonMarquis">
+  <link rel="shortcut icon" href="favicon.png">
+
+  <title>Telegram Bot Tester</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+  <link href="toolbox.css" rel="stylesheet">
+  <script src="bot-toolbox.js"></script>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="header clearfix">
+      <nav class="navbar navbar-light bg-faded">
+        <a class="navbar-brand text-muted" href="">
+          <img src="favicon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          Telegram Bot Tester
+        </a>
+      </nav>
+    </div>	
+
+    <div class="card text-xs-left">
+      
+      <div class="tab-content">
+        <div class="card-block tab-pane active fade in" id="send-text" role="tabpanel">
+          <div class="form-group row">
+            <label for="send-text-channel" class="col-xs-2 col-form-label">Chat Id</label>
+            <div class="col-xs-10">
+              <input class="form-control" type="text" value="" id="send-text-channel" placeholder="Channel Name / Chat Id">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="send-text-message" class="col-xs-2 col-form-label">Message</label>
+            <div class="col-xs-10">
+              <div class="input-group">
+                <input class="form-control" type="text" value="" id="send-text-message" placeholder="Message"></div>
+            </div>
+          </div>
+
+        <div class="form-group row">
+          <label for="form-device-token" class="col-xs-2 col-form-label">Token</label>
+          <div class="col-xs-10">
+            <div class="input-group">
+              <input class="form-control" type="text" value="" id="form-device-token" placeholder="Bot Token">
+            </div>
+          </div>
+        </div>
+        </div>
+
+      </div>
+      <div class="card-footer text-muted text-xs-right">
+        <div class="btn-group text-xs-right" role="group">
+          <button id="btn-send" type="button" class="btn btn-sm btn-outline-primary"><b>Send</b></button>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- /container -->
+
+  <div id="alert-container" class="container" style="position:fixed;top:20px;right:20px;left:20px;z-index: 100;"></div>
+</body>
+</html>
